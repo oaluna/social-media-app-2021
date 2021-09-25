@@ -1,23 +1,18 @@
 const express = require("express");
-const mongoose = require("mongoose");
-const config = require("config");
+const mongoose = require("mongoose"); // new
 
-const app = express();
+const mongoUri = process.env.DB;
+const port = process.env.PORT || 5000
 
-app.use(express.json());
-
-const db = process.env.DB || "mongodb://localhost:27017"
-
+// Connect to MongoDB database
 mongoose
-  .connect(db)
-  .then(() => console.log("💻 MongoDB Successfully Connected"))
-  .catch(err => console.error(err));
+  .connect(mongoUri, { useUnifiedTopology: false, useNewUrlParser: true })
+    .then(() => {
+      console.log("MongoDB connection established")
+}).catch((err) => console.log(err, "Failed to connect"))
 
-app.get("/", (req, res) => {
-  res.send("Server connected and working 🔥");
+const app = express(app);
+
+app.listen(5000, () => {
+  console.log("Server has started! Listening from port " + port);
 });
-
-
-const port = process.env.PORT || 3000;
-
-app.listen(port, () => `Server running on port ${port} 🔥`);
