@@ -39,21 +39,21 @@ const Navbar = () => (
             </Link>
           </li>
           <li>
-            <Link
-              style={{ textDecoration: "none", color: "white" }}
-              to="/hello"
-            >
-              Hello
-            </Link>
-          </li>
-          <li>
             <Link style={{ textDecoration: "none", color: "white" }} to="/">
               About
             </Link>
           </li>
           <li>
-            <Link style={{ textDecoration: "none", color: "white" }} to="/">
-              Login/Signup
+            <Link
+              style={{ textDecoration: "none", color: "white" }}
+              to="/Signup"
+            >
+              Sign Up
+            </Link>
+          </li>
+          <li>
+            <Link style={{ textDecoration: "none", color: "white" }} to="/Login">
+              Login
             </Link>
           </li>
         </ul>

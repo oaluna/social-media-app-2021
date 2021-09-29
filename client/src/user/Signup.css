@@ -1,0 +1,48 @@
+.card {
+    position: absolute;
+   width: 600px;
+    left: 50vw;
+    text-align: center;
+    top: 15vh;
+    padding: 25px;
+    background-color: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.06) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    z-index: 9;
+}
+
+
+.error {
+    vertical-align: middle;
+}
+
+
+.title {
+    margin-top: 2;
+    color: #F96C85;
+}
+
+
+.textField {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    padding: 5px;
+    margin: 5px;
+    width: 80%;
+}
+
+label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 15px;
+    line-height: 1;
+}
+
+.submit {
+    margin: auto;
+    margin-bottom: 2;
+}
